@@ -1,6 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import {useEffect, useState} from "react";
 
-const App = () => {
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
+import Item from "./views/item/Item";
+import Home from "./views/home/Home";
+
+import './App.css';
+
+export default function App() {
   // store response from server
   const [response, setResponse] = useState('')
 
@@ -15,13 +26,17 @@ const App = () => {
   }, [])
 
   return (
-    <div style={{ textAlign: 'center' }}>
-      <h1> Prueba tecnica front Ecomsur 2021</h1>
-      <p>Borra esto y comienza aqui.</p>
-      {/* Check to see if express server is running correctly */}
-      <h5>{response}</h5>
-    </div>
-  )
-}
-
-export default App
+    <>
+        <Router>
+          <Switch>
+            <Route path="/" exact>
+              <Home response={response}/>
+            </Route>
+            <Route path="/item">
+              <Item response={response}/>
+            </Route>
+          </Switch>
+      </Router>
+    </>
+  );
+};
