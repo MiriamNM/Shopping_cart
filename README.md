@@ -6,9 +6,7 @@ Welcome to Shopping cart, in an app in which the data of the products of a datab
 ![Shopping cart App](https://github.com/MiriamNM/Shopping_cart/blob/master/front/src/assets/app.jpg.png)
 
 - In the BITACORA.md file are the instructions to see and use this application.
-
-**When making the inscriptions, you should be able to see the page that I show below.
-
+- 
 ## Technological stack
 - Figma- Use this page, it is easy for me to make my prototypes here.
 - React- I find it easy to be able to make the components, perform the functionality and also, the code is clean.
