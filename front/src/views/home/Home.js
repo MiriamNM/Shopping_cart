@@ -7,7 +7,7 @@ const Home = (props) => {
   return (
     <div>
         <Header />
-        <Main response={props.response}/>
+        <Main data={props.data}/>
         <Footer />
     </div>
   )

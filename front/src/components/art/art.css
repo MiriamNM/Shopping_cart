@@ -1,0 +1,48 @@
+.product {
+    width: 285px;
+    height: 223px;
+    left: 168px;
+    top: 345px;
+
+    background: #FF6B6B;
+    border: 3px solid #FFE66D;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.product h3 {
+    margin-top: 15%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 13%;
+
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 120%;
+    color: #292F36;
+}
+
+.container-access{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container-access button {
+    width: 115.97px;
+    height: 48px;
+    left: 719px;
+    top: 713px;
+
+    background: #FFE66D;
+    border: none;
+    border-radius: 10px;
+
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: #292F36;
+}

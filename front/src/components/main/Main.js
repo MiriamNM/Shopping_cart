@@ -10,14 +10,14 @@ const Main = (props) => {
     if (!!match) {
         return (
             <section>
-                <Product response={props.response}/>
+                <Product data={props.data}/>
             </section>
         )
     } else {
         return (
-            <section>
+            <section className="container-card">
                 <h2>Products</h2>
-                <Card response={props.response}/>
+                <Card data={props.data}/>
             </section>
         )
     }

@@ -13,16 +13,16 @@ import './App.css';
 
 export default function App() {
   // store response from server
-  const [response, setResponse] = useState('')
+  const [data, setData] = useState([])
 
   // call server to see if its running
   useEffect(() => {
-    const getApiResponse = () => {
+    const getApiData = () => {
       fetch('http://localhost:5000/api/products/')
-        .then((res) => res.text())
-        .then((res) => setResponse(res))
+        .then((res) => res.json())
+        .then((res) => setData(res))
     }
-    getApiResponse()
+    getApiData()
   }, [])
 
   return (
@@ -30,10 +30,10 @@ export default function App() {
         <Router>
           <Switch>
             <Route path="/" exact>
-              <Home response={response}/>
+              <Home data={data}/>
             </Route>
             <Route path="/item">
-              <Item response={response}/>
+              <Item data={data}/>
             </Route>
           </Switch>
       </Router>

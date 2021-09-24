@@ -8,7 +8,7 @@ export default function Item(props) {
     return (
         <>
             <Header />
-            <Main response={props.response}/>
+            <Main data={props.data}/>
             <Footer />
         </>
     );

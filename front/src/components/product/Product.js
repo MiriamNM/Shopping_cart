@@ -4,7 +4,7 @@ const Product = (props) => {
         return (
             <>
                 <p>Hello Product</p>
-                <p>{props.response}</p>
+                <p>{props.data}</p>
             </>
         )
 }
