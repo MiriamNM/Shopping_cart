@@ -1,8 +1,3 @@
-# Shopping cart 🚀
-
-## Welcome!
-Welcome to Shopping cart, in an app in which the data of the products of a database is observed. You can add the products you like in a cart and you can also view detailed product information.
-
 # Setup instructions 🚀
 
 1. Fork my repository.
