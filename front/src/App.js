@@ -1,27 +1,57 @@
-import React, { useEffect, useState } from 'react'
+import {useEffect, useState} from "react";
 
-const App = () => {
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
+import Item from "./views/item/Item";
+import Home from "./views/home/Home";
+
+import './App.css';
+
+export default function App() {
   // store response from server
-  const [response, setResponse] = useState('')
+  const [data, setData] = useState([]);
+  const [saveData, setSaveData] = useState({
+    dataSaved:[],
+});
 
   // call server to see if its running
   useEffect(() => {
-    const getApiResponse = () => {
-      fetch('http://localhost:5000/')
-        .then((res) => res.text())
-        .then((res) => setResponse(res))
+    const getApiData = () => {
+      fetch('http://localhost:5000/api/products/')
+        .then((res) => res.json())
+        .then((res) => setData(res))
     }
-    getApiResponse()
-  }, [])
+    getApiData()
+  }, []);
+
+  const handleSaveData = (descriptionArt) => {
+    setSaveData({...saveData, dataSaved:[ descriptionArt]});
+  }
 
   return (
-    <div style={{ textAlign: 'center' }}>
-      <h1> Prueba tecnica front Ecomsur 2021</h1>
-      <p>Borra esto y comienza aqui.</p>
-      {/* Check to see if express server is running correctly */}
-      <h5>{response}</h5>
-    </div>
-  )
-}
-
-export default App
+    <>
+        <Router>
+          <Switch>
+            <Route path="/" exact>
+              <Home 
+                data={data}
+                saveData={saveData}
+                setSaveData={setSaveData}
+                handleSaveData={handleSaveData}
+              />
+            </Route>
+            <Route path="/item">
+              <Item 
+                data={data}
+                saveData={saveData}
+              />
+            </Route>
+          </Switch>
+      </Router>
+    </>
+  );
+};
