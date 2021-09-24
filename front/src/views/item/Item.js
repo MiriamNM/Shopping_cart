@@ -1,8 +1,15 @@
+import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
+import Main from '../../components/main/Main';
+
+import './item.css';
+
 export default function Item(props) {
     return (
         <>
-            <p>Hello Item</p>
-            <p>{props.response}</p>
+            <Header />
+            <Main response={props.response}/>
+            <Footer />
         </>
     );
   };

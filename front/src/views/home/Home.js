@@ -1,8 +1,14 @@
+import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
+import Main from '../../components/main/Main';
+import './home.css';
+
 const Home = (props) => {
   return (
     <div>
-        <p>Hello Home</p>
-        <p>{props.response}</p>
+        <Header />
+        <Main response={props.response}/>
+        <Footer />
     </div>
   )
 }

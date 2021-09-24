@@ -18,7 +18,7 @@ export default function App() {
   // call server to see if its running
   useEffect(() => {
     const getApiResponse = () => {
-      fetch('http://localhost:5000/')
+      fetch('http://localhost:5000/api/products/')
         .then((res) => res.text())
         .then((res) => setResponse(res))
     }
