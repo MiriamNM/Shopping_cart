@@ -7,7 +7,12 @@ const Home = (props) => {
   return (
     <div>
         <Header />
-        <Main data={props.data}/>
+        <Main 
+          data={props.data}
+          saveData={props.saveData}
+          setSaveData={props.setSaveData}
+          handleSaveData={props.handleSaveData}
+        />
         <Footer />
     </div>
   )

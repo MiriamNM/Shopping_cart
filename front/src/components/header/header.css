@@ -1,16 +1,16 @@
 header {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     height: 120px;
     left: 0px;
     top: 0px;
-
     background: #4ECDC4;
 }
 
 header h1 {
-    display: flex;
-    justify-self: left;
-    margin-top: 1%;
+    margin-top: 3.5%;
     margin-left: 2%;
 
     font-family: Staatliches;
@@ -22,10 +22,8 @@ header h1 {
 }
 
 header img {
-    justify-self: right;
+    margin-left: -30%;
     width: 62.93px;
     height: 43.59px;
     margin-top: 3%;
-    margin-left: 0%;
-    margin-left: 60%;
 }

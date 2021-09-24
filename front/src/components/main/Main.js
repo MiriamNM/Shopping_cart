@@ -10,14 +10,22 @@ const Main = (props) => {
     if (!!match) {
         return (
             <section>
-                <Product data={props.data}/>
+                <Product
+                    data={props.data}
+                    saveData={props.saveData}
+                />
             </section>
         )
     } else {
         return (
             <section className="container-card">
                 <h2>Products</h2>
-                <Card data={props.data}/>
+                <Card
+                    data={props.data}
+                    saveData={props.saveData}
+                    setSaveData={props.setSaveData}
+                    handleSaveData={props.handleSaveData}
+                />
             </section>
         )
     }

@@ -13,7 +13,10 @@ import './App.css';
 
 export default function App() {
   // store response from server
-  const [data, setData] = useState([])
+  const [data, setData] = useState([]);
+  const [saveData, setSaveData] = useState({
+    dataSaved:[],
+});
 
   // call server to see if its running
   useEffect(() => {
@@ -23,17 +26,29 @@ export default function App() {
         .then((res) => setData(res))
     }
     getApiData()
-  }, [])
+  }, []);
+
+  const handleSaveData = (descriptionArt) => {
+    setSaveData({...saveData, dataSaved:[ descriptionArt]});
+  }
 
   return (
     <>
         <Router>
           <Switch>
             <Route path="/" exact>
-              <Home data={data}/>
+              <Home 
+                data={data}
+                saveData={saveData}
+                setSaveData={setSaveData}
+                handleSaveData={handleSaveData}
+              />
             </Route>
             <Route path="/item">
-              <Item data={data}/>
+              <Item 
+                data={data}
+                saveData={saveData}
+              />
             </Route>
           </Switch>
       </Router>

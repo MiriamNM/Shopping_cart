@@ -8,7 +8,10 @@ export default function Item(props) {
     return (
         <>
             <Header />
-            <Main data={props.data}/>
+            <Main
+                data={props.data}
+                saveData={props.saveData}
+            />
             <Footer />
         </>
     );
