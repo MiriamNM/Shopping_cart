@@ -1,0 +1,14 @@
+.container-cartWthStock {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-DataMap {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-item {
+    display: flex;
+    flex-direction: row;
+}

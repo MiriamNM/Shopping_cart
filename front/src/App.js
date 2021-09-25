@@ -16,7 +16,10 @@ export default function App() {
   const [data, setData] = useState([]);
   const [saveData, setSaveData] = useState({
     dataSaved:[],
-});
+  });
+  const [saveStock, setSaveStock] = useState({
+    stockSaved:[],
+  });
 
   // call server to see if its running
   useEffect(() => {
@@ -29,7 +32,11 @@ export default function App() {
   }, []);
 
   const handleSaveData = (descriptionArt) => {
-    setSaveData({...saveData, dataSaved:[ descriptionArt]});
+    setSaveData({...saveData, dataSaved:[descriptionArt]});
+  }
+
+  const handleSaveStock = (Stock) => {
+    setSaveStock({...saveStock, stockSaved:[Stock]});
   }
 
   return (
@@ -42,6 +49,9 @@ export default function App() {
                 saveData={saveData}
                 setSaveData={setSaveData}
                 handleSaveData={handleSaveData}
+                saveStock={saveStock}
+                setSaveStock={setSaveStock}
+                handleSaveStock={handleSaveStock}
               />
             </Route>
             <Route path="/item">

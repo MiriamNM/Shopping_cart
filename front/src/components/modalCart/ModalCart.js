@@ -1,41 +1,38 @@
-// import {useState} from "react";
-import Shopping_cart_icon from '../../assets/Shopping_cart_icon.png';
+import ModalWithoutStock from "../modalWithStock/ModalWithStock";
+import ModalWithStock from "../modalWithStock/ModalWithStock";
 import './modalCart.css';
 
-const ModalCart = () => {
-    // if (!Stock) {
-    //     return (
-    //         <section>
-    //             <Product
-    //                 data={props.data}
-    //                 saveData={props.saveData}
-    //             />
-    //         </section>
-    //     )
-    // } else {
-    //     return (
-    //         <section className="container-card">
-    //             <h2>Products</h2>
-    //             <Card
-    //                 data={props.data}
-    //                 saveData={props.saveData}
-    //                 setSaveData={props.setSaveData}
-    //                 handleSaveData={props.handleSaveData}
-    //             />
-    //         </section>
-    //     )
-    // }
-
-
-  return (
-    <div id="miModal" class="modal">
-        <div class="modal-contenido">
-            <a href="#">X</a>
-            <h2>Mi primer Modal</h2>
-            <p>Este es mi primera ventana modal sin utilizar JavaScript.</p>
-        </div>  
-    </div>
-  )
+const ModalCart = (props) => {
+    if (props.saveStock.stockSaved === []) {
+      return (
+        <div id="miModal" className="modal">
+            <div className="modal-contenido">
+              {/* <a href="#"><p>X</p></a> */}
+              <ModalWithoutStock />
+            </div>
+        </div>
+      )
+    } else {
+      return (
+        <div id="miModal" className="modal">
+            <div className="modal-contenido">
+              {/* <a href="#"><p>X</p></a> */}
+              <div className="container-cartWthStock">
+                  <div>{props.saveStock.stockSaved.map((item)=>
+                      <ModalWithStock
+                        item={item}
+                        key={item.id}
+                        handleSaveData={props.handleSaveData}
+                      />
+                    )}
+                  </div>
+                  <p><strong>Total: $</strong><input type="number"></input></p>
+                  <button>To buy</button>
+              </div>
+            </div>
+        </div>
+      )
+    }
 }
 
 export default ModalCart;

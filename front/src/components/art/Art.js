@@ -5,10 +5,12 @@ import './art.css';
 
 const Art = (props) => {
     return(
-        <div className="product" onClick={()=>(props.handleSaveData(props.item))}>
+        <div className="product" onClick={()=>{(props.handleSaveData(props.item)); (props.handleSaveStock(props.item))}}>
             <h3>{props.item.name}</h3>
             <div className="container-access">
-                <img src={add_cart} alt="Add cart icon"/>
+                <div>
+                    <img src={add_cart} alt="Add cart icon"/>
+                </div>
                 <Link to="/item"><button>Description</button></Link>
             </div>
         </div>

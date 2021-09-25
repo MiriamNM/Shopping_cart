@@ -7,7 +7,7 @@ import './main.css';
 const Main = (props) => {
     let match = useRouteMatch("/item");
 
-    if (!!match) {
+    if (!match) {
         return (
             <section>
                 <Product
@@ -25,6 +25,9 @@ const Main = (props) => {
                     saveData={props.saveData}
                     setSaveData={props.setSaveData}
                     handleSaveData={props.handleSaveData}
+                    saveStock={props.saveStock}
+                    setSaveStock={props.setSaveStock}
+                    handleSaveStock={props.handleSaveStock}
                 />
             </section>
         )
