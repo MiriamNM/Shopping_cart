@@ -15,7 +15,7 @@ const DetailsProduct = (props) => {
                     <div className="container-text">
                         <p><strong>Details:</strong> {props.item.description}</p>
                         <p><strong>Brand:</strong> {props.item.brand}</p>
-                        <p><strong>Price:</strong> {props.item.price}</p>
+                        <p><strong>Price:</strong> $ {props.item.price}</p>
                     </div>
                 </div>
                 <div className="container-access">
