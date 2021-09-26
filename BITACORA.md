@@ -10,5 +10,6 @@ Navigate to the front directory and rerun the command: npm install
 Go back to the root directory.
 
 ![Shopping cart App](https://github.com/MiriamNM/Shopping_cart/blob/master/front/src/assets/app.jpg.png)
+![Shopping cart App](https://raw.githubusercontent.com/MiriamNM/Shopping_cart/master/front/src/assets/productDetails.png)
 
 **When making the inscriptions, you should be able to see the page that I show below.

@@ -4,6 +4,7 @@
 Welcome to Shopping cart, in an app in which the data of the products of a database is observed. You can add the products you like in a cart and you can also view detailed product information.
 
 ![Shopping cart App](https://github.com/MiriamNM/Shopping_cart/blob/master/front/src/assets/app.jpg.png)
+![Shopping cart App](https://raw.githubusercontent.com/MiriamNM/Shopping_cart/master/front/src/assets/productDetails.png)
 
 - In the BITACORA.md file are the instructions to see and use this application.
 - 
