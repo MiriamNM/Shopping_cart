@@ -7,7 +7,7 @@ import './item.css';
 export default function Item(props) {
     return (
         <>
-            <Header />
+            <Header data={props.data}/>
             <Main
                 data={props.data}
                 saveData={props.saveData}

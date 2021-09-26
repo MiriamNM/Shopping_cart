@@ -19,7 +19,7 @@ const DetailsProduct = (props) => {
                     </div>
                 </div>
                 <div className="container-access">
-                    <img src={add_cart_icon_hoover} alt="Add cart icon"/>
+                    <div onClick={()=>(props.handleSaveStock(props.item))}><img src={add_cart_icon_hoover} alt="Add cart icon"/></div>
                     <Link to="/"><button>Return</button></Link>
                 </div>
             </div>

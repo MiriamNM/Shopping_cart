@@ -6,14 +6,16 @@ import './home.css';
 const Home = (props) => {
   return (
     <div>
-        <Header saveStock={props.saveStock}/>
-        <Main 
+        <Header
+          data={props.data}
+          saveStock={props.saveStock}
+          handleSaveData={props.handleSaveData}
+        />
+        <Main
           data={props.data}
           saveData={props.saveData}
           setSaveData={props.setSaveData}
           handleSaveData={props.handleSaveData}
-          saveStock={props.saveStock}
-          setSaveStock={props.setSaveStock}
           handleSaveStock={props.handleSaveStock}
         />
         <Footer />

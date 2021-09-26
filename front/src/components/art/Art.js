@@ -5,16 +5,14 @@ import './art.css';
 
 const Art = (props) => {
     return(
-        <div className="product" onClick={()=>(props.handleSaveData(props.item))}>
+        <div className="product">
             <div className="image-product">
                 <img src={props.item.image} alt={props.item.name}/>
             </div>
             <h3>{props.item.name}</h3>
             <div className="container-access">
-                <div>
-                    <img src={add_cart} alt="Add cart icon"/>
-                </div>
-                <Link to="/item"><button>Description</button></Link>
+                <div onClick={()=>(props.handleSaveStock(props.item))}><img src={add_cart} alt="Add cart icon"/></div>
+                <Link to="/item"><button onClick={()=>(props.handleSaveData(props.item))}>Description</button></Link>
             </div>
         </div>
     )

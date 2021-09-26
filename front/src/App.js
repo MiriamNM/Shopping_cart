@@ -17,6 +17,7 @@ export default function App() {
   const [saveData, setSaveData] = useState({
     dataSaved:[],
   });
+
   const [saveStock, setSaveStock] = useState({
     stockSaved:[],
   });
@@ -47,17 +48,16 @@ export default function App() {
               <Home 
                 data={data}
                 saveData={saveData}
-                setSaveData={setSaveData}
                 handleSaveData={handleSaveData}
                 saveStock={saveStock}
-                setSaveStock={setSaveStock}
                 handleSaveStock={handleSaveStock}
               />
             </Route>
             <Route path="/item">
-              <Item 
+              <Item
                 data={data}
                 saveData={saveData}
+                handleSaveStock={handleSaveStock}
               />
             </Route>
           </Switch>

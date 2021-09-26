@@ -6,7 +6,12 @@ const Product = (props) => {
         return (
             <div className="container-description">
                 {data.map((item)=>
-                    <DetailsProduct item={item} id={props.id} saveData={props.saveData}/>
+                    <DetailsProduct 
+                        item={item}
+                        id={props.id}
+                        saveData={props.saveData}
+                        handleSaveStock={props.handleSaveStock}
+                    />
                 )}
             </div>
         )
