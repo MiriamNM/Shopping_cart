@@ -13,7 +13,9 @@ const Main = (props) => {
                 <Product
                     data={props.data}
                     saveData={props.saveData}
-                    handleSaveStock={props.handleSaveStock}
+                    saveStock={props.saveStock}
+                    setSaveStock={props.setSaveStock}
+                    // handleSaveStock={props.handleSaveStock}
                 />
             </section>
         )
@@ -26,7 +28,9 @@ const Main = (props) => {
                     saveData={props.saveData}
                     setSaveData={props.setSaveData}
                     handleSaveData={props.handleSaveData}
-                    handleSaveStock={props.handleSaveStock}
+                    saveStock={props.saveStock}
+                    setSaveStock={props.setSaveStock}
+                    // handleSaveStock={props.handleSaveStock}
                 />
             </section>
         )

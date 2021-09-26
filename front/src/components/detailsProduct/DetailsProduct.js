@@ -4,6 +4,12 @@ import add_cart_icon_hoover from '../../assets/add_cart_icon_hoover.png';
 import './detailsProduct.css';
 
 const DetailsProduct = (props) => {
+    const addProduct = (id) => {
+        const product = props.data.filter((art) => art.id === id);
+        props.setSaveStock([...props.saveStock, ...product]);
+        console.log(props.saveStock.length);
+    };
+    
     return(
         <>
             <div className='container-Details'>
@@ -19,7 +25,7 @@ const DetailsProduct = (props) => {
                     </div>
                 </div>
                 <div className="container-access">
-                    <div onClick={()=>(props.handleSaveStock(props.item))}><img src={add_cart_icon_hoover} alt="Add cart icon"/></div>
+                    <div onClick={()=>(addProduct(props.id))}><img src={add_cart_icon_hoover} alt="Add cart icon"/></div>
                     <Link to="/"><button>Return</button></Link>
                 </div>
             </div>

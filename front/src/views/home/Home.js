@@ -8,15 +8,18 @@ const Home = (props) => {
     <div>
         <Header
           data={props.data}
-          saveStock={props.saveStock}
           handleSaveData={props.handleSaveData}
+          saveStock={props.saveStock}
+          setSaveStock={props.setSaveStock}
         />
         <Main
           data={props.data}
           saveData={props.saveData}
           setSaveData={props.setSaveData}
           handleSaveData={props.handleSaveData}
-          handleSaveStock={props.handleSaveStock}
+          saveStock={props.saveStock}
+          setSaveStock={props.setSaveStock}
+          // handleSaveStock={props.handleSaveStock}
         />
         <Footer />
     </div>

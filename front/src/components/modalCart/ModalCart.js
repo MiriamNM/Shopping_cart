@@ -1,49 +1,30 @@
-// import ModalWithoutStock from "../modalWithStock/ModalWithStock";
+import ModalWithoutStock from "../modalWithStock/ModalWithStock";
 import ModalWithStock from "../modalWithStock/ModalWithStock";
 import './modalCart.css';
 
 const ModalCart = (props) => {
-  const data = props.saveStock.stockSaved;
-    // if (props.saveStock.stockSaved == []) {
-    //   return (
-    //     <div id="miModal" className="modal">
-    //         <div className="modal-contenido">
-    //           <a href="#"><p>X</p></a>
-    //           <ModalWithoutStock />
-    //         </div>
-    //     </div>
-    //   )
-    // } else {
-    //   return (
-    //     <div id="miModal" className="modal">
-    //         <div className="modal-contenido">
-    //           <a href="#"><p>X</p></a>
-    //           <div className="container-cartWthStock">
-    //               <div>{props.saveStock.stockSaved.map((item)=>
-    //                   <ModalWithStock
-    //                     item={item}
-    //                     key={item.id}
-    //                     handleSaveStock={props.handleSaveStock}
-    //                   />
-    //                 )}
-    //               </div>
-    //               <p><strong>Total: $</strong><input type="number"></input></p>
-    //               <button>To buy</button>
-    //           </div>
-    //         </div>
-    //     </div>
-    //   )
-    // }
+  if (props.saveStock.length === 0) {
+    return (
+      <div id="miModal" className="modal">
+          <div className="modal-contenido">
+            <a href="#"><p>X</p></a>
+            <ModalWithoutStock />
+          </div>
+      </div>
+    )
+  } else {
     return (
       <div id="miModal" className="modal">
           <div className="modal-contenido">
             <a href="#"><p>X</p></a>
             <div className="container-cartWthStock">
-                <div>{data.map((item)=>
+                <div>{props.data.map((item)=>
                     <ModalWithStock
                       item={item}
                       id={props.id}
+                      data={props.data}
                       saveStock={props.saveStock}
+                      setSaveStock={props.setSaveStock}
                       handleSaveData={props.handleSaveData}
                     />
                   )}
@@ -54,6 +35,7 @@ const ModalCart = (props) => {
           </div>
       </div>
     )
+  }
 }
 
 export default ModalCart;

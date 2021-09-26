@@ -9,8 +9,11 @@ const Product = (props) => {
                     <DetailsProduct 
                         item={item}
                         id={props.id}
+                        data={props.data}
                         saveData={props.saveData}
-                        handleSaveStock={props.handleSaveStock}
+                        saveStock={props.saveStock}
+                        setSaveStock={props.setSaveStock}
+                        // handleSaveStock={props.handleSaveStock}
                     />
                 )}
             </div>

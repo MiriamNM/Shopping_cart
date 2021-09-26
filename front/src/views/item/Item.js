@@ -11,6 +11,8 @@ export default function Item(props) {
             <Main
                 data={props.data}
                 saveData={props.saveData}
+                saveStock={props.saveStock}
+                setSaveStock={props.setSaveStock}
             />
             <Footer />
         </>

@@ -10,8 +10,9 @@ const Header = (props) => {
         <div className="miModal">
           <ModalCart
             data={props.data}
-            saveStock={props.saveStock}
             handleSaveData={props.handleSaveData}
+            saveStock={props.saveStock}
+            setSaveStock={props.setSaveStock}
           />
           <img src={Shopping_cart_icon} alt="Shopping cart icon"/>
         </div>

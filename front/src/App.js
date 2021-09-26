@@ -18,9 +18,7 @@ export default function App() {
     dataSaved:[],
   });
 
-  const [saveStock, setSaveStock] = useState({
-    stockSaved:[],
-  });
+  const [saveStock, setSaveStock] = useState([]);
 
   // call server to see if its running
   useEffect(() => {
@@ -36,9 +34,9 @@ export default function App() {
     setSaveData({...saveData, dataSaved:[descriptionArt]});
   }
 
-  const handleSaveStock = (Stock) => {
-    setSaveStock({...saveStock, stockSaved:[Stock]});
-  }
+  // const handleSaveStock = (Stock) => {
+  //   setSaveStock({...saveStock, stockSaved:[Stock]});
+  // }
 
   return (
     <>
@@ -50,14 +48,17 @@ export default function App() {
                 saveData={saveData}
                 handleSaveData={handleSaveData}
                 saveStock={saveStock}
-                handleSaveStock={handleSaveStock}
+                setSaveStock={setSaveStock}
+                // handleSaveStock={handleSaveStock}
               />
             </Route>
             <Route path="/item">
               <Item
                 data={data}
                 saveData={saveData}
-                handleSaveStock={handleSaveStock}
+                saveStock={saveStock}
+                setSaveStock={setSaveStock}
+                // handleSaveStock={handleSaveStock}
               />
             </Route>
           </Switch>

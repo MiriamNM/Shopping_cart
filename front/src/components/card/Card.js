@@ -9,8 +9,11 @@ const Card = (props) => {
                     <Art
                         item={item}
                         key={item.id}
+                        data={props.data}
                         handleSaveData={props.handleSaveData}
-                        handleSaveStock={props.handleSaveStock}
+                        saveStock={props.saveStock}
+                        setSaveStock={props.setSaveStock}
+                        // handleSaveStock={props.handleSaveStock}
                     />)}
             </div>
         )
