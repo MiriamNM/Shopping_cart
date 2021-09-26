@@ -10,7 +10,7 @@ const DetailsProduct = (props) => {
                 <h2>{props.item.name}</h2>
                 <div className="container-info">
                     <div className="container-picture">
-                        {/* Picture */}
+                        <img src={props.item.image} alt={props.item.name}/>
                     </div>
                     <div className="container-text">
                         <p><strong>Details:</strong> {props.item.description}</p>

@@ -1,6 +1,8 @@
 .product {
+    display: flex;
+    flex-direction: column;
     width: 285px;
-    height: 223px;
+    height: 446px;
     left: 168px;
     top: 345px;
 
@@ -11,7 +13,7 @@
 }
 
 .product h3 {
-    margin-top: 15%;
+    margin-top: 6%;
     margin-left: 3%;
     margin-right: 3%;
     margin-bottom: 13%;
@@ -24,9 +26,24 @@
     color: #292F36;
 }
 
+.image-product img {
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 245px;
+    height: 230px;
+    border: 1px solid #FFE66D;
+}
+
 .container-access{
     display: flex;
     justify-content: space-evenly;
+}
+
+.container-access img {
+    width: 43.67px;
+    height: 48px;
+    left: 204px;
+    top: 713px;
 }
 
 .container-access button {

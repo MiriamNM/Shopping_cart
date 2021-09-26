@@ -1,16 +1,17 @@
 footer {
-    position: absolute;
+    position: relative;
     width: 100%;
     left: 0px;
-    top: 916px;
+    top: 600px;
+    height: 100px;
 
     background: #4ECDC4;
 }
 
 footer h3 {
-    margin-top: 2%;
-    margin-left: 7.5%;
-
+    margin-bottom: 0%;
+    padding-top: 3%;
+    margin-left: 8%;
     font-family: Comfortaa;
     font-style: normal;
     font-weight: normal;
